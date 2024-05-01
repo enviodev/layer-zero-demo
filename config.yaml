@@ -1,0 +1,94 @@
+name: My Envio Indexer
+unordered_multichain_mode: true
+
+contracts:
+  - name: EndpointV2
+    handler: src/EventHandlers.ts
+    events:
+      - event: ComposeDelivered(address from, address to, bytes32 guid, uint16 index)
+      - event: ComposeSent(address from, address to, bytes32 guid, uint16 index, bytes message)
+      - event: DefaultReceiveLibrarySet(uint32 eid, address newLib)
+      - event: DefaultReceiveLibraryTimeoutSet(uint32 eid, address oldLib, uint256 expiry)
+      - event: DefaultSendLibrarySet(uint32 eid, address newLib)
+      - event: DelegateSet(address sender, address delegate)
+      - event: InboundNonceSkipped(uint32 srcEid, bytes32 sender, address receiver, uint64 nonce)
+      - event: LibraryRegistered(address newLib)
+      - event: LzComposeAlert(address indexed from, address indexed to, address indexed executor, bytes32 guid, uint16 index, uint256 gas, uint256 value, bytes message, bytes extraData, bytes reason)
+      - event: LzReceiveAlert(address indexed receiver, address indexed executor, (uint32,bytes32,uint64) origin, bytes32 guid, uint256 gas, uint256 value, bytes message, bytes extraData, bytes reason)
+      - event: LzTokenSet(address token)
+      - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+      - event: PacketBurnt(uint32 srcEid, bytes32 sender, address receiver, uint64 nonce, bytes32 payloadHash)
+      - event: PacketDelivered((uint32,bytes32,uint64) origin, address receiver)
+      - event: PacketNilified(uint32 srcEid, bytes32 sender, address receiver, uint64 nonce, bytes32 payloadHash)
+      - event: PacketSent(bytes encodedPayload, bytes options, address sendLibrary)
+      - event: PacketVerified((uint32,bytes32,uint64) origin, address receiver, bytes32 payloadHash)
+      - event: ReceiveLibrarySet(address receiver, uint32 eid, address newLib)
+      - event: ReceiveLibraryTimeoutSet(address receiver, uint32 eid, address oldLib, uint256 timeout)
+      - event: SendLibrarySet(address sender, uint32 eid, address newLib)
+networks:
+  - id: 1
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 10
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 56
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 100
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 137
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 8453
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 42161
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 42170
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 43114
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 59144
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c
+  - id: 81457
+    start_block: 0
+    contracts:
+      - name: EndpointV2
+        address:
+          - 0x1a44076050125825900e736c501f859c50fE728c

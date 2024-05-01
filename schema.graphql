@@ -1,0 +1,158 @@
+type EndpointV2_ComposeDelivered {
+  id: ID!
+  from: String!
+  to: String!
+  guid: String!
+  index: BigInt!
+}
+
+type EndpointV2_ComposeSent {
+  id: ID!
+  from: String!
+  to: String!
+  guid: String!
+  index: BigInt!
+  message: String!
+}
+
+type EndpointV2_DefaultReceiveLibrarySet {
+  id: ID!
+  eid: BigInt!
+  newLib: String!
+}
+
+type EndpointV2_DefaultReceiveLibraryTimeoutSet {
+  id: ID!
+  eid: BigInt!
+  oldLib: String!
+  expiry: BigInt!
+}
+
+type EndpointV2_DefaultSendLibrarySet {
+  id: ID!
+  eid: BigInt!
+  newLib: String!
+}
+
+type EndpointV2_DelegateSet {
+  id: ID!
+  sender: String!
+  delegate: String!
+}
+
+type EndpointV2_InboundNonceSkipped {
+  id: ID!
+  srcEid: BigInt!
+  sender: String!
+  receiver: String!
+  nonce: BigInt!
+}
+
+type EndpointV2_LibraryRegistered {
+  id: ID!
+  newLib: String!
+}
+
+type EndpointV2_LzComposeAlert {
+  id: ID!
+  from: String!
+  to: String!
+  executor: String!
+  guid: String!
+  index: BigInt!
+  gas: BigInt!
+  value: BigInt!
+  message: String!
+  extraData: String!
+  reason: String!
+}
+
+type EndpointV2_LzReceiveAlert {
+  id: ID!
+  receiver: String!
+  executor: String!
+  origin_0: BigInt!
+  origin_1: String!
+  origin_2: BigInt!
+  guid: String!
+  gas: BigInt!
+  value: BigInt!
+  message: String!
+  extraData: String!
+  reason: String!
+}
+
+type EndpointV2_LzTokenSet {
+  id: ID!
+  token: String!
+}
+
+type EndpointV2_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+}
+
+type EndpointV2_PacketBurnt {
+  id: ID!
+  srcEid: BigInt!
+  sender: String!
+  receiver: String!
+  nonce: BigInt!
+  payloadHash: String!
+}
+
+type EndpointV2_PacketDelivered {
+  id: ID!
+  origin_0: BigInt!
+  origin_1: String!
+  origin_2: BigInt!
+  receiver: String!
+}
+
+type EndpointV2_PacketNilified {
+  id: ID!
+  srcEid: BigInt!
+  sender: String!
+  receiver: String!
+  nonce: BigInt!
+  payloadHash: String!
+}
+
+type EndpointV2_PacketSent {
+  id: ID!
+  encodedPayload: String!
+  options: String!
+  sendLibrary: String!
+}
+
+type EndpointV2_PacketVerified {
+  id: ID!
+  origin_0: BigInt!
+  origin_1: String!
+  origin_2: BigInt!
+  receiver: String!
+  payloadHash: String!
+}
+
+type EndpointV2_ReceiveLibrarySet {
+  id: ID!
+  receiver: String!
+  eid: BigInt!
+  newLib: String!
+}
+
+type EndpointV2_ReceiveLibraryTimeoutSet {
+  id: ID!
+  receiver: String!
+  eid: BigInt!
+  oldLib: String!
+  timeout: BigInt!
+}
+
+type EndpointV2_SendLibrarySet {
+  id: ID!
+  sender: String!
+  eid: BigInt!
+  newLib: String!
+}
